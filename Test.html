@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+var myUrl = 'https://www.google.com';
+//  But if you make it from a browser, then it will work without problem ...
+var proxy = 'https://cors-anywhere.herokuapp.com/';
+var finalURL = proxy + myUrl;
+// With the get method
+$.get(finalURL, function( data ) {
+document.open('text/html');document.write(data);document.close();
+    console.log(data);
+});
+</script>
+</head>
+<body>
+</body>
+</html>
